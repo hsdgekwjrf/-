@@ -45,17 +45,17 @@ int main(){
 		string cmd;
 		cout<<">";
 		cin>>cmd;
-		if(cmd == "f_read"){
+		if(cmd == "f_read" or cmd == "f_load"){
 			string name;
 			cin>>name;
 			read_f_file(name);
 		}
-		else if(cmd == "f_write"){
+		else if(cmd == "f_write" or cmd == "f_save"){
 			string name;
 			cin>>name;
 			write_f_file(name);
 		}
-		else if(cmd == "d_read"){
+		else if(cmd == "d_read" or cmd == "d_load"){
 			string name;
 			cin>>name;
 			read_d_file(name);
@@ -83,6 +83,14 @@ int main(){
 				cout<<"Training "<<i<<" Result:"<<return_output<<endl;
 				step = -step;
 			}
+		}
+		else if(cmd == "?" or cmd == "help"){
+			cout<<"f_load/f_read <FILE>"<<endl;
+			cout<<"f_write/f_save <FILE>"<<endl;
+			cout<<"d_load/d_read <FILE>"<<endl;
+			cout<<"cat_d"<<endl;
+			cout<<"run"<<endl;
+			cout<<"training <STEP> <ANSWER> <LOOP> <MAX>"<<endl;
 		}
 		else{
 			cout<<"[ERR] Command Not Found Error"<<endl;
