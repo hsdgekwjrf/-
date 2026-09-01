@@ -133,6 +133,12 @@ void load(){
 		mem_x++;
 	}
 	f_value[mem_x] = &output.fo;
+	
+	for(int i=1;i<=9;i++){
+		for(int j=1;j<=9;j++){
+			net[i][j].init();
+		}
+	}
 	return;
 }
 
