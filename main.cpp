@@ -92,6 +92,12 @@ int main(){
 			cout<<"run"<<endl;
 			cout<<"training <STEP> <ANSWER> <LOOP> <MAX>"<<endl;
 		}
+		else if(cmd == "exit" or cmd == "quit"){
+			return 0;
+		}
+		else if(cmd == "" or cmd == "\n"){
+			cout<<endl;
+		}
 		else{
 			cout<<"[ERR] Command Not Found Error"<<endl;
 		}
